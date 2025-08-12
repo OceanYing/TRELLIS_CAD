@@ -17,7 +17,7 @@ from trellis.utils import render_utils, postprocessing_utils
 
 # Load a pipeline from a model folder or a Hugging Face model hub.
 # pipeline = TrellisImageTo3DPipeline.from_pretrained("microsoft/TRELLIS-image-large")
-pipeline = TrellisImageTo3DPipeline.from_pretrained("/fs/vulcan-projects/SER/CAD_Generation/TRELLIS/ckpts/models--microsoft--TRELLIS-image-large/snapshots/25e0d31ffbebe4b5a97464dd851910efc3002d96")   # Using local path, make sure there is a pipeline.json under the path
+pipeline = TrellisImageTo3DPipeline.from_pretrained(f"{os.getcwd()}/ckpts/models--microsoft--TRELLIS-image-large/snapshots/25e0d31ffbebe4b5a97464dd851910efc3002d96")   # Using local path, make sure there is a pipeline.json under the path
 pipeline.cuda()
 
 # Load an image
